@@ -1,0 +1,20 @@
+name: ssh-james
+run-name: ssh-and-pull
+on: 
+  push:
+    branches:
+    - james
+
+jobs:
+  SSH:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cross-the-world/ssh-pipeline@master
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          connect_timeout: 10s
+          script: |
+            cd /home/ubuntu/stars-james
+            git pull
