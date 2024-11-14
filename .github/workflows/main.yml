@@ -1,4 +1,4 @@
-name: ssh
+name: ssh-main
 run-name: ssh-and-pull
 on: 
   push:
