@@ -3,7 +3,7 @@ run-name: ssh-and-pull
 on: 
   push:
     branches:
-    - main
+    - brandon
 
 jobs:
   SSH:
@@ -16,5 +16,5 @@ jobs:
           key: ${{ secrets.KEY }}
           connect_timeout: 10s
           script: |
-            cd /home/ubuntu/stars
+            cd /home/ubuntu/stars-brandon
             git pull
