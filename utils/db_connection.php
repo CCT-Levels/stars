@@ -1,7 +1,7 @@
 <?php
 function OpenCon()
 {
-    $dbhost = "localhost";
+    $dbhost = "86.145.13.112";
     $dbuser = "website";
     $dbpass = "website";
     $db = "stars";
